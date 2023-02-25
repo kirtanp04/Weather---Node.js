@@ -1,0 +1,18 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    border: 1px solid black;
+    padding: 1rem;
+    margin: auto;
+}
+
+.info{
+    /* margin-top: 5rem; */
+    margin: auto;
+}
+.temp{
+    color: rgb(108, 154, 253);
+}

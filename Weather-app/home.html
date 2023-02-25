@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
+
+        <div id="weather"><i class="fas fa-sun" style="color:#eccc68"></i></div>
+        <div class="info">
+            <h2 class="location"><i class="fas fa-street-view" style="color: rgb(108, 154, 253)"></i>{%location%},{%country%}</h2>
+            <!-- <p id="data">SAT | OCT 23 | 10:49AM</p> -->
+            <h1 class="temp">{%Temp%}</h1>
+            <h3 class="tempmin">Min {%Tempmin%} | Max {%Tempmax%}</h3>
+        </div>
+
+    </div>
+    
+<script>
+    const curdata = document.getElementById('data')
+    let weather = document.getElementById('weather')
+    
+    const temp = 'Clouds';
+    const getData = ()=>{
+        var weeks = new Array(7)
+        weeks[0]= 'sunday';
+        weeks[1]= 'monday';
+        weeks[2]= 'tuesday';
+        weeks[3]= 'wednesday';
+        weeks[4]= 'thursday';
+        weeks[5]= 'friday';
+        weeks[6]= 'saturday';
+        let time = new Date()
+        let curdata = (weeks[time.getDay()])
+        return curdata
+    }
+const currentTime =()=>{
+const mon = [
+    'jan','feb','march','april','may','june','july','august',
+    'sep','oct','nov','dec'
+]
+
+    var now = new Date()
+    var month = mon[now.getMonth() + 1]
+    var day = now.getDate()
+    console.log(month +'/' + day )
+}
+currentTime()
+getData()
+</script>
+</body>
+</html>
